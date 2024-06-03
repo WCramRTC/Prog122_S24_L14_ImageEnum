@@ -7,6 +7,33 @@
         mc:Ignorable="d"
         Title="NotesWindow" Height="450" Width="800">
     <Grid>
-        
+        <StackPanel>
+            <!-- Image Display -->
+            <Image
+                Name="DisplayImage"
+                Height="200"
+                Width="200"
+                Stretch="Uniform"
+                Margin="10" />
+
+            <!-- Button to pick image file -->
+            <Button
+                Content="Pick Image"
+                Click="PickImage_Click"
+                Margin="10" />
+
+            <!-- Enum ComboBox -->
+            <ComboBox
+                Name="ImageSizeComboBox"
+                SelectionChanged="ImageSizeComboBox_SelectionChanged"
+                Margin="10">
+                <ComboBoxItem
+                    Content="Small" />
+                <ComboBoxItem
+                    Content="Medium" />
+                <ComboBoxItem
+                    Content="Large" />
+            </ComboBox>
+        </StackPanel>
     </Grid>
 </Window>
